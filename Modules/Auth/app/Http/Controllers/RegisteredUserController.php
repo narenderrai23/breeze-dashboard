@@ -37,6 +37,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return to_route('admin.dashboard');
+        return to_route('admin.dashboard.index');
     }
 }
