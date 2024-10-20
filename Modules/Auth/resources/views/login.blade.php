@@ -9,7 +9,7 @@
                 <div class="p-3 w-100">
                     <!-- Header -->
                     <div class="mb-3 text-center">
-                        <a class="link-fx fw-bold fs-1" href="index.html">
+                        <a class="link-fx fw-bold fs-1" href="{{ route('home') }}">
                             <span class="text-dark">Dash</span><span class="text-primary">mix</span>
                         </a>
                         <p class="text-uppercase fw-bold fs-sm text-muted">Sign In</p>
@@ -19,6 +19,8 @@
                     <!-- Sign In Form -->
                     <div class="row g-0 justify-content-center">
                         <div class="col-sm-8 col-xl-6">
+                            <x-base::auth-session-status class="mb-4" :status="session('status')" />
+
                             <form class="js-validation-signin" action="{{ route('login') }}" method="POST">
                                 @csrf
                                 <div class="py-3">
@@ -51,7 +53,7 @@
                                             </a>
                                         @endif
                                         <a class="btn btn-sm btn-alt-secondary d-block d-lg-inline-block mb-1"
-                                            href="op_auth_signup.html">
+                                            href="{{ route('register') }}">
                                             <i class="fa fa-plus opacity-50 me-1"></i> New Account
                                         </a>
                                     </p>
