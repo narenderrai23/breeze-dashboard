@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('admin::layouts.backend')
 
 @section('content')
     <!-- Hero -->
