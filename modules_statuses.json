@@ -2,5 +2,6 @@
     "Auth": true,
     "Base": true,
     "Admin": true,
-    "Setting": true
+    "Setting": true,
+    "Translation": true
 }
